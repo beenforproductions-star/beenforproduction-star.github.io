@@ -935,3 +935,11 @@ body.lb-disable-scrolling {
 #portfolio .owl-carousel {
   margin-top: 180px;
 }
+@media (max-width: 768px) {
+  .baner-content span {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+}
