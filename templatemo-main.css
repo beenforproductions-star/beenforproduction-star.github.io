@@ -148,7 +148,7 @@ a:hover { color: #FF0; }
   padding-top: 19.5vh;
   text-align: center;
   position: relative;
-  z-index: 3;
+  z-index: 0;
 }
 
 .hero-video {
@@ -197,7 +197,7 @@ a:hover { color: #FF0; }
 .baner-content .container,
 .baner-content .first-content {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 
@@ -843,33 +843,22 @@ body.lb-disable-scrolling {
   text-align: center;
   color: #fff;
 }
-.tabs-content .video-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 25px auto;
-  padding-top: 56.25%; /* 16:9 */
-  background: #000;
-  border-radius: 12px;
-  overflow: hidden;
-}
 
-
-}
-
-/* FORCE tab videos to behave */
+/* Video frames inside tabs */
 .tabs-content .video-wrap {
   position: relative;
   width: 100%;
   max-width: 960px;
-  margin: 0 auto 30px auto;
-  padding-top: 56.25%;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto 30px;
+  padding-top: 0;
   background: #000;
   border-radius: 12px;
   overflow: hidden;
   z-index: 1;
 }
 
+/* YouTube videos inside frames */
 .tabs-content .video-wrap iframe {
   position: absolute !important;
   inset: 0;
@@ -877,6 +866,9 @@ body.lb-disable-scrolling {
   height: 100% !important;
   border: 0;
   max-width: 100% !important;
+  display: block;
+}
+
 }
 @media (min-width: 992px) {
   .fixed-side-navbar .nav > li a {
@@ -934,13 +926,4 @@ body.lb-disable-scrolling {
 
 #portfolio .owl-carousel {
   margin-top: 180px;
-}
-
-@media (max-width: 768px) {
-  .baner-content .first-content span {
-    background: rgba(0, 0, 0, 0.45) !important;
-    padding: 8px 14px !important;
-    border-radius: 8px !important;
-    display: inline-block !important;
-  }
 }
