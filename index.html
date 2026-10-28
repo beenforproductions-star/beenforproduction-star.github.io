@@ -189,13 +189,25 @@ https://templatemo.com/tm-526-vanilla
               <p>2025 Showreel.</p>
             </div>
 
-            <div id="tab2">
-              <div class="video-wrap">
-          <iframe  src="https://www.youtube.com/embed/_ygY17jKhjE?si=nbu6yPw6f-8ZeV9-" 
-              allowfullscreen></iframe
-            </div>
-            <p>2026 Showreel.</p>
-            </div>
+        
+<div id="tab2">
+  <div class="video-wrap custom-video"
+       data-video-id="_ygY17jKhjE">
+
+    <button type="button"
+            class="video-thumbnail-button"
+            aria-label="Play 2026 Showreel">
+      <img
+        src="img/sd2026"
+        alt="2026 Showreel thumbnail">
+      <span class="play-icon" aria-hidden="true">▶</span>
+    </button>
+
+  </div>
+
+  <p>2026 Showreel.</p>
+</div>
+
           
         </div>
 
@@ -340,6 +352,28 @@ https://templatemo.com/tm-526-vanilla
             } // End if
           });
         });
+    </script>
+
+    <script>
+    document.querySelectorAll('.custom-video').forEach(function (wrap) {
+      const button = wrap.querySelector('.video-thumbnail-button');
+
+      button.addEventListener('click', function () {
+        const iframe = document.createElement('iframe');
+
+        iframe.src =
+          'https://www.youtube.com/embed/' +
+          wrap.dataset.videoId +
+          '?autoplay=1';
+
+        iframe.title = '2026 Showreel';
+        iframe.allow =
+          'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+
+        wrap.replaceChildren(iframe);
+      });
+    });
     </script>
 
 </body>
