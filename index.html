@@ -347,27 +347,7 @@ https://templatemo.com/tm-526-vanilla
         });
     </script>
 
-    <script>
-    document.querySelectorAll('.custom-video').forEach(function (wrap) {
-      const button = wrap.querySelector('.video-thumbnail-button');
-
-      button.addEventListener('click', function () {
-        const iframe = document.createElement('iframe');
-
-        iframe.src =
-          'https://www.youtube.com/embed/' +
-          wrap.dataset.videoId +
-          '?autoplay=1';
-
-        iframe.title = '2026 Showreel';
-        iframe.allow =
-          'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-        iframe.allowFullscreen = true;
-
-        wrap.replaceChildren(iframe);
-      });
-    });
-    </script>
+    
 
 </body>
 </html>
